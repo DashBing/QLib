@@ -9,6 +9,7 @@ def main():
     print(inner_product(QBit(1, 0), QBit(1, 0)))
     print(inner_product(H_gate(QBit(1,0)), QBit(1, 0))**2)
     print(QBit(sqrt(Rational(3, 5)), sqrt(Rational(2, 5))).P(QBit(sqrt(Rational(2, 5)), sqrt(Rational(3, 5)))))
+    print(inner_product(QBit(1, 0)*QBit(0, 1), QBit(1, 0)*QBit(0, 1)))
 
 if __name__ == "__main__":
     main()

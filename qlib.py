@@ -34,7 +34,7 @@ def inner_product(bra:QBit, ket:QBit) -> float|sympy.Rational:
     return(tmp[0, 0])
 
 def tensor_product(a:QBit, b:QBit) -> QBit:
-    pass
+    return(QBit().set_from_matrix(sympy.tensorproduct(a.matrix, b.matrix)))
 
 def H_gate(input:QBit) -> QBit:
     tmp = sympy.sqrt(2)**(-1) * matrix_mul_vector(sympy.Matrix([[1, 1], [1, -1]]), input.matrix)
